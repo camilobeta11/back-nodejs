@@ -1,10 +1,12 @@
 import express from 'express';
 import connectDB from './config/db';
 import authRoutes from './routes/authRoutes';
+import protectedRoutes from './routes/protectedRoutes';
 const app = express();
 
 // Middleware
 app.use(express.json());
+app.use('/api', protectedRoutes);
 
 // Health Check endpoint
 app.get('/health', (_req, res) => {
