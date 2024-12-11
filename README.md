@@ -20,3 +20,11 @@ Este proyecto es un backend desarrollado con **Node.js**, **TypeScript**, y **Mo
 2. Clonar este repositorio:
    ```bash
    git clone https://github.com/camilobeta11/back-nodejs.git
+3. Correr el proyecto:
+   ```bash
+   npx ts-node src/index.ts
+**Se verá asi:
+   ```bash
+   Swagger -> http://localhost:3000/api-docs
+   MongoDB connected successfully
+   Server running on http://localhost:3000
