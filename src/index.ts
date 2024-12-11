@@ -2,6 +2,8 @@ import express from 'express';
 import connectDB from './config/db';
 import authRoutes from './routes/authRoutes';
 import protectedRoutes from './routes/protectedRoutes';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from './swagger-output.json';
 const app = express();
 
 // Middleware
@@ -14,7 +16,10 @@ app.get('/health', (_req, res) => {
 });
 //auth
 app.use('/api/auth', authRoutes);
+// Swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+console.log('Swagger -> http://localhost:3000/api-docs');
 // Port
 const PORT = process.env.PORT ?? 3000;
 
