@@ -1,6 +1,6 @@
 import express from 'express';
 import connectDB from './config/db';
-
+import authRoutes from './routes/authRoutes';
 const app = express();
 
 // Middleware
@@ -10,6 +10,8 @@ app.use(express.json());
 app.get('/health', (_req, res) => {
     res.status(200).send({ status: 'OK', message: 'Server is running' });
 });
+//auth
+app.use('/api/auth', authRoutes);
 
 // Port
 const PORT = process.env.PORT ?? 3000;
