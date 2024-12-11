@@ -1,4 +1,4 @@
-# Backend API - Prueba Técnica
+# Backend API
 
 Este proyecto es un backend desarrollado con **Node.js**, **TypeScript**, y **MongoDB**, diseñado para cumplir con los requisitos de la prueba técnica. Implementa registro, login, verificación de salud del servidor y autenticación mediante JWT. También incluye documentación automática con Swagger y está preparado para ejecutarse en Docker.
 
